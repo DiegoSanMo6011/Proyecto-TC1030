@@ -21,6 +21,7 @@ Consta de un menu con las opciones antes mencionadas.
 ## Consideraciones 
 
 El programa solo permite pendientes de tipo Escolares, Sociales y Domesticas, el usuario no puede crear otro tipo de pendientes.
+
 Cada pendiente tendrá un día como atributo, en este dia solo se permitirá ingresar un número que esté en el rango de días que tiene el mes en el que se trabaja, es decir, en el mes de mayo solo se pueden ingresar numeros enteros entre el 1 y el 31. 
 
 
