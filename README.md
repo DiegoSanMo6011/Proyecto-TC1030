@@ -1,6 +1,6 @@
 # Proyecto-TC1030
 
-Proyecto de a materia TC1030 Programación Orientada a Objetos. Trata sobre una Agenda para registrar pendientes y permite buscarlos por nivel de urgencia, fecha y tipo de pendiente, genera una estructura de clases para poder manejar los tipos de pendientes. Cada tipo de pendiente tendrá su propia forma de calcular su nivel de importancia.
+Proyecto de la materia TC1030 Programación Orientada a Objetos. Trata sobre una Agenda para registrar pendientes y permite buscarlos por nivel de urgencia, fecha y tipo de pendiente, genera una estructura de clases para poder manejar los tipos de pendientes. Cada tipo de pendiente tendrá su propia forma de calcular su nivel de importancia.
 
 ## Funcionalidad
 
