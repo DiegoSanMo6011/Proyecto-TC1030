@@ -15,7 +15,7 @@ Las funciones que tendra el programa son:
   - Mostrar los pendientes totales, mostrar unicamente los pendientes del tipo elegido por el usuario.
   - Mostrar unicamente los pendientes de un dia en especifico, tambien elegido por el usuario.
   - Mostrar los pendientes organizados por nivel de importancia, nivel que sera calculado por el mismo porgrama.
-  - 
+  
 Consta de un menu con las opciones antes mencionadas.
 
 ## Concideraciones 
