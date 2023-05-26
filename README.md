@@ -19,10 +19,23 @@ Las funciones que tendra el programa son:
   
 Consta de un menu con las opciones antes mencionadas.
 
+Por el momento el codigo mustra la creacion de un objeto de cada tipo.
+La funcion nivel_urgencia() es solo un prototipo muy simplificado de lo que se planea sea.
+
 ## Consideraciones 
 
 El programa solo permite pendientes de tipo Escolares, Sociales y Domesticas, el usuario no puede crear otro tipo de pendientes.
 
-Cada pendiente tendrá un día como atributo, en este dia solo se permitirá ingresar un número que esté en el rango de días que tiene el mes en el que se trabaja, es decir, en el mes de mayo solo se pueden ingresar numeros enteros entre el 1 y el 31. 
+Se planea que cada pendiente tendrá un día como atributo, en este dia solo se permitirá ingresar un número que esté en el rango de días que tiene el mes en el que se trabaja, es decir, en el mes de mayo solo se pueden ingresar numeros enteros entre el 1 y el 31. 
+
+El programa solo corre en la consola y esta hecho con c++ standard por lo que corre en todos los sistemas operativos
+
+compilar con: "g++ Domesticas.h Escolares.h Sociales.h Pendientes.h main.cpp"
+
+correr en linux: "/a.out"
+
+correr en windows: "a.exe"
+
+
 
 
