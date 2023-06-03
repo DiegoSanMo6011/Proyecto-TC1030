@@ -23,13 +23,11 @@ Consta de un menu con las opciones antes mencionadas.
 
 ## Consideraciones 
 
-Por el momento el codigo mustra la creacion de un objeto de cada tipo.
+Por el momento el codigo ya cumple con todas sus dunciones, sin embargo el metodo muestra_pend_urge() aun no funciona.
 
 La funcion nivel_urgencia() es solo un prototipo muy simplificado de lo que se planea sea.
 
 El programa solo permite pendientes de tipo Escolares, Sociales y Domesticas, el usuario no puede crear otro tipo de pendientes.
-
-Se planea que cada pendiente tendrá un día como atributo, en este dia solo se permitirá ingresar un número que esté en el rango de días que tiene el mes en el que se trabaja, es decir, en el mes de mayo solo se pueden ingresar numeros enteros entre el 1 y el 31. 
 
 
 
