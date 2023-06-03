@@ -20,26 +20,36 @@
 using namespace std;
 
 class Domesticas: public Pendientes{
-    // declaro atributos
+    // declaro atributos de instancia privados
     private:
-    int importancia;
-    string estado;
+        int importancia;
+        string estado;
     // declaracion de los constructores y los metodos del objeto
     public:
-    // cosntructor default
-    Domesticas(){
-        nombre = ""; tipo = ""; dia = 0;
-    }
-    //constructor
-    Domesticas(string nom, string tip, int day, int impor, string estatus):Pendientes(nom,tip,day){
-        importancia = impor; estado = estatus;
-    }
-    //metodos
-    string get_estado();
-    void set_estado(string nuevo_estado);
-    int nivel_urgencia ();
-    string to_string ();
+        // cosntructor default
+        Domesticas();
+        //constructor
+        Domesticas(string,string,int,int,string);
+        //metodos
+        string get_tipo();
+        string get_estado();
+        int get_dia();
+        void set_estado(string nuevo_estado);        
+        int nivel_urgencia ();
+        string to_string ();
 };
+
+//constructor default 
+Domesticas::Domesticas () {
+    nombre = ""; 
+    tipo = ""; 
+    dia = 0;
+}
+//cosntructor
+Domesticas::Domesticas (string nom, string tip, int day, int impor, string estatus): Pendientes(nom,tip,day){
+    importancia = impor;
+    estado = estatus;
+}
 
 /**
  * getter estado
@@ -49,6 +59,25 @@ class Domesticas: public Pendientes{
 */
 string Domesticas::get_estado(){
     return estado;
+}
+
+/**
+ * getter dia
+ *
+ * @param
+ * @return string tipo
+*/
+int Domesticas::get_dia(){
+    return dia;
+}
+/**
+ * getter tipo
+ *
+ * @param
+ * @return string tipo
+*/
+string Domesticas::get_tipo(){
+    return tipo;
 }
 
 /**

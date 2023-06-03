@@ -20,27 +20,35 @@
 using namespace std;
 
 class Sociales: public Pendientes{
-    // declaro atributos
-    private:
-    string hora;
-    bool importante;
+    // declaro atributos privados de instancia
+        private:
+        string hora;
+        bool importante;
     // declaracion de los constructores y los metodos del objeto
     public:
-    // cosntructor default
-    Sociales(){
-        nombre = ""; tipo = ""; dia = 0;
-    }
-    //constructor
-    Sociales(string nom, string tip, int day, string hor, bool impor):Pendientes(nom,tip,day){
-        hora = hor; importante = impor;
-    }
-    //metodos
-    string get_hora();
-    void set_hora(string nueva_hora);
-    int nivel_urgencia ();
-    string to_string ();
+        // cosntructor default
+        Sociales();
+        //constructor
+        Sociales(string nom, string tip, int day, string hor, bool impor);
+        //metodos
+        string get_hora();
+        string get_tipo();
+        int get_dia();
+        void set_hora(string nueva_hora);
+        int nivel_urgencia ();
+        string to_string ();
 };
-
+//constructor default
+Sociales::Sociales () {
+    nombre = ""; 
+    tipo = ""; 
+    dia = 0;
+}
+//cosntructor
+Sociales::Sociales (string nom, string tip, int day, string hor, bool impor): Pendientes(nom,tip,day){
+    hora = hor;
+    importante = impor;
+}
 /**
  * getter hora
  *
@@ -49,6 +57,26 @@ class Sociales: public Pendientes{
 */
 string Sociales::get_hora(){
     return hora;
+}
+
+/**
+ * getter tipo
+ *
+ * @param
+ * @return string tipo
+*/
+string Sociales::get_tipo(){
+    return tipo;
+}
+
+/**
+ * getter dia
+ *
+ * @param
+ * @return string tipo
+*/
+int Sociales::get_dia(){
+    return dia;
 }
 
 /**

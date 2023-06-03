@@ -20,27 +20,37 @@
 using namespace std;
 
 class Escolares: public Pendientes{
-    // declaro atributos
+    // declaro atributos privados de instancia
     private:
-    string materia;
-    string hora_entrega;
-    string estado;
+        string materia;
+        string hora_entrega;
+        string estado;
     // declaracion de los constructores y los metodos del objeto
     public:
-    // cosntructor default
-    Escolares(){
-        nombre = ""; tipo = ""; dia = 0;
-    }
-    //constructor
-    Escolares(string nom, string tip, int day, string mate, string hora, string estatus):Pendientes(nom,tip,day){
-        materia = mate; hora_entrega = hora; estado = estatus;
-    }
-    //metodos
-    string get_estado();
-    void set_estado(string nuevo_estado);
-    int nivel_urgencia ();
-    string to_string ();
+        // cosntructor default
+        Escolares();
+        //constructor
+        Escolares(string nom, string tip, int day, string mate, string hora, string estatus);
+        //metodos
+        string get_estado();
+        string get_tipo();
+        int get_dia();
+        void set_estado(string nuevo_estado);
+        int nivel_urgencia ();
+        string to_string ();
 };
+//constructor default 
+Escolares::Escolares () {
+    nombre = ""; 
+    tipo = ""; 
+    dia = 0;
+}
+//cosntructor
+Escolares::Escolares (string nom, string tip, int day, string mate, string hora, string estatus): Pendientes(nom,tip,day){
+    materia = mate; 
+    hora_entrega = hora;
+    estado = estatus;
+}
 
 /**
  * getter estado
@@ -50,6 +60,26 @@ class Escolares: public Pendientes{
 */
 string Escolares::get_estado(){
     return estado;
+}
+
+/**
+ * getter tipo
+ *
+ * @param
+ * @return string tipo
+*/
+string Escolares::get_tipo(){
+    return tipo;
+}
+
+/**
+ * getter dia
+ *
+ * @param
+ * @return string tipo
+*/
+int Escolares::get_dia(){
+    return dia;
 }
 
 /**

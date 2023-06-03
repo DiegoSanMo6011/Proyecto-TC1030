@@ -30,15 +30,48 @@ class Pendientes{
     //declaracion del constructores y los metodos del objeto
     public:
         //constructor default
-        Pendientes(){
-            nombre= ""; tipo= ""; dia=0;
-        }
+        Pendientes();
         //contructor 
-        Pendientes(string nom, string tip, int day){
-            nombre=nom; tipo=tip; dia=day;
-        }
+        Pendientes(string nom, string tip, int day);
         //metodos
         virtual string to_string() = 0;
         virtual int nivel_urgencia() = 0;
+        virtual string get_tipo() = 0;
+        virtual int get_dia() = 0;
+
+
 };
+//cosntructor default
+Pendientes::Pendientes () {
+    nombre = ""; 
+    tipo = ""; 
+    dia = 0;
+}
+//contructor
+Pendientes::Pendientes (string nom, string tip, int day){
+    nombre=nom;
+    tipo=tip;
+    dia=day;
+
+}
+
+/**
+ * getter tipo
+ *
+ * @param
+ * @return string tipo
+*/
+string Pendientes::get_tipo(){
+    return tipo;
+}
+
+/**
+ * getter dia
+ *
+ * @param
+ * @return string tipo
+*/
+int Pendientes::get_dia(){
+    return dia;
+}
 #endif //PENDIENTES_H
