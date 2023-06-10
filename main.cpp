@@ -38,7 +38,7 @@ string estado_pend(){
     int opcion = 0;
     int ban = 1;
     string estado = "";
-    while (ban = 1){
+    while (ban == 1){
         cout << "\n Selecciona el estado del pendiente";
         cout << "\n (1) Sin empezar \n (2) Con avances \n (3) Terminado \n";
         cin >> opcion;
@@ -62,6 +62,7 @@ string estado_pend(){
             ban = 1;
         }
     }
+    return estado;
 }
 
 //funcion para escoger el tipo del pendiente
@@ -69,7 +70,7 @@ string tipo_pend(){
     int opcion = 0;
     int ban = 1;
     string tipo = "";
-    while (ban = 1){
+    while (ban == 1){
         cout << "\n Selecciona el tipo de pendientes a bsucar";
         cout << "\n (1) Escolares \n (2) Domesticas \n (3) Sociales \n";
         cin >> opcion;
@@ -93,6 +94,7 @@ string tipo_pend(){
             ban = 1;
         }
     }
+    return tipo;
 }
 
 //funcion importante
@@ -100,7 +102,7 @@ bool importante(){
     int opcion = 0;
     bool importante = false;
     int ban = 1;
-    while (ban = 1){
+    while (ban == 1){
         cout << "\n Selecciona si el pendiente es importante o no";
         cout << "\n (1) Si \n (2) No \n";
         cin >> opcion;
@@ -119,6 +121,7 @@ bool importante(){
             ban = 1;
         }
     }
+    return importante;
 }
 
 int main (){
@@ -126,7 +129,8 @@ int main (){
     int opcion = 0;
     //variables temporales
     char temp_nombre[100]="";
-    string  temp_tipo, temp_materia, temp_hora, temp_estado;
+    char temp_materia[100]="";
+    string  temp_tipo, temp_hora, temp_estado;
     int temp_dia, temp_importancia;
     bool temp_importante;
 
@@ -151,7 +155,8 @@ int main (){
                 cout << "Dime el dia " << endl;
                 cin >> temp_dia;
                 cout << "Dime la materia " << endl;
-                cin >> temp_materia;
+                cin.ignore();
+                cin.getline(temp_materia,100);
                 cout << "Dime la hora de entrega en formato 00:00 "<<endl;
                 cin >> temp_hora;
                 temp_estado = estado_pend();
@@ -195,8 +200,7 @@ int main (){
                 break;
             // caso 5 muestra pendientes por tipo
             case 5:
-                cout << ("Selecciona el tipo de pendiente que deseas buscar");
-                cin >> temp_tipo;
+                temp_tipo = tipo_pend();
                 agenda.muestra_pend(temp_tipo);
                 break;
             // caso 6 muestra pendientes por dia
