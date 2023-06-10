@@ -41,6 +41,7 @@ correr en windows: "a.exe"
 ## Correciones
 
 Se corrigieron aquellos errores del código que en entregas anteriores evitaban que el código compilara.
+
 Se corrigió la gramatica del readme.
 
 
