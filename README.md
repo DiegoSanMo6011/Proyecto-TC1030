@@ -4,7 +4,7 @@ Proyecto de la materia TC1030 Programación Orientada a Objetos. Trata sobre una
 
 ## Funcionalidad
 
-El programa permite unicamente las altas de nuevos pendientes de tipo:
+El programa permite únicamente las altas de nuevos pendientes de tipo:
   
  - Escolares
  - Domesticas
@@ -13,31 +13,36 @@ El programa permite unicamente las altas de nuevos pendientes de tipo:
 Las funciones que tendra el programa son: 
 
   - Mostrar los pendientes totales
-  - Mostrar unicamente los pendientes del tipo elegido por el usuario.
-  - Mostrar unicamente los pendientes de un dia en especifico, tambien elegido por el usuario.
-  - Mostrar los 10 pendientes mas urgentes organizados por nivel de importancia, nivel que sera calculado por el mismo porgrama.
+  - Mostrar únicamente los pendientes del tipo elegido por el usuario.
+  - Mostrar únicamente los pendientes de un día en especifico, también elegido por el usuario.
+  - Mostrar los 10 pendientes más urgentes organizados por nivel de importancia, nivel que será calculado por el mismo porgrama.
   
-Consta de un menu con las opciones antes mencionadas.
+Consta de un menú con las opciones antes mencionadas.
 
 
 
 ## Consideraciones 
 
-Por el momento el codigo ya cumple con todas sus dunciones, sin embargo el metodo muestra_pend_urge() aun no funciona.
 
-La funcion nivel_urgencia() es solo un prototipo muy simplificado de lo que se planea sea.
+La función nivel_urgencia() es sólo un prototipo muy simplificado de lo que se planea sea.
 
 El programa solo permite pendientes de tipo Escolares, Sociales y Domesticas, el usuario no puede crear otro tipo de pendientes.
 
+Es importante ingresar el tipo de dato de cada atributo que se pide, los tipos de datos están especificados en el uml.
 
+El programa sólo corre en la consola y está hecho con c++ standard por lo que corre en todos los sistemas operativos
 
-El programa solo corre en la consola y esta hecho con c++ standard por lo que corre en todos los sistemas operativos
-
-compilar con: "g++ Domesticas.h Escolares.h Sociales.h Pendientes.h main.cpp"
+compilar con: "g++ Domesticas.h Escolares.h Sociales.h Pendientes.h Agenda.h main.cpp"
 
 correr en linux: "/a.out"
 
 correr en windows: "a.exe"
+
+## Correciones
+
+Se corrigieron aquellos errores del código que en entregas anteriores evitaban que el código compilara.
+Se corrigió la gramatica del readme.
+
 
 
 
