@@ -42,6 +42,8 @@ correr en windows: "a.exe"
 
 Se corrigieron aquellos errores del código que en entregas anteriores evitaban que el código compilara.
 
+Se corrigió el UML y se especificó cual es la clase abstracta.
+
 Se corrigió la gramatica del readme.
 
 
