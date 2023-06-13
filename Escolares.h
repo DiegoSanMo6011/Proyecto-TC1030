@@ -32,10 +32,6 @@ class Escolares: public Pendientes{
         //constructor
         Escolares(string nom, string tip, int day, string mate, string hora, string estatus);
         //metodos
-        string get_estado();
-        string get_tipo();
-        int get_dia();
-        void set_estado(string nuevo_estado);
         int nivel_urgencia ();
         string to_string ();
 };
@@ -50,46 +46,6 @@ Escolares::Escolares (string nom, string tip, int day, string mate, string hora,
     materia = mate; 
     hora_entrega = hora;
     estado = estatus;
-}
-
-/**
- * getter estado
- *
- * @param
- * @return string estado
-*/
-string Escolares::get_estado(){
-    return estado;
-}
-
-/**
- * getter tipo
- *
- * @param
- * @return string tipo
-*/
-string Escolares::get_tipo(){
-    return tipo;
-}
-
-/**
- * getter dia
- *
- * @param
- * @return string tipo
-*/
-int Escolares::get_dia(){
-    return dia;
-}
-
-/**
- * setter estado
- *
- * @param string nuevo_estado 
- * @return 
-*/
-void Escolares::set_estado(string nuevo_estado){
-    estado=nuevo_estado;
 }
 
 /**

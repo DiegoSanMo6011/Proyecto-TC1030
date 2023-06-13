@@ -36,10 +36,8 @@ class Pendientes{
         //metodos
         virtual string to_string() = 0;
         virtual int nivel_urgencia() = 0;
-        virtual string get_tipo() = 0;
-        virtual int get_dia() = 0;
-
-
+        string get_tipo();
+        int get_dia();
 };
 //cosntructor default
 Pendientes::Pendientes () {

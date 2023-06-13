@@ -29,7 +29,7 @@ void menu(){
     cout<<"4. Muestra pendientes.\n";
     cout<<"5. Muestra pendientes por tipo.\n";
     cout<<"6. Muestra pendientes por dia.\n";
-    cout<<"7. Muestra 10 pendientes mas urgentes.\n";
+    cout<<"7. Muestra pendientes en orden de mas urgente a menos.\n";
     cout<<"8. Salir\n"<<endl;
 }
 

@@ -31,10 +31,6 @@ class Sociales: public Pendientes{
         //constructor
         Sociales(string nom, string tip, int day, string hor, bool impor);
         //metodos
-        string get_hora();
-        string get_tipo();
-        int get_dia();
-        void set_hora(string nueva_hora);
         int nivel_urgencia ();
         string to_string ();
 };
@@ -49,45 +45,7 @@ Sociales::Sociales (string nom, string tip, int day, string hor, bool impor): Pe
     hora = hor;
     importante = impor;
 }
-/**
- * getter hora
- *
- * @param
- * @return string hora
-*/
-string Sociales::get_hora(){
-    return hora;
-}
 
-/**
- * getter tipo
- *
- * @param
- * @return string tipo
-*/
-string Sociales::get_tipo(){
-    return tipo;
-}
-
-/**
- * getter dia
- *
- * @param
- * @return string tipo
-*/
-int Sociales::get_dia(){
-    return dia;
-}
-
-/**
- * setter hora
- *
- * @param string nueva_hora
- * @return 
-*/
-void Sociales::set_hora(string nueva_hora){
-    hora = nueva_hora;
-}
 
 /**
  * Calcula el nivel de urgencia del pendiente

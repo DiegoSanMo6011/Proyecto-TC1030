@@ -15,6 +15,7 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include <bits/stdc++.h>
 
 //bibliotecas con los objetos a usar
 #include "Pendientes.h"
@@ -128,7 +129,7 @@ void Agenda::muestra_pend(int dia){
 }
 
 /**
- * muestra_pend_urge imprime los 10 pendientes con mayor nivel de urgenia
+ * muestra_pend_urge imprime los  pendientes en orden de  mayor nivel de urgenia a menor
  *
  * utiliza el arreglo pend[] y el nivel de urgencia, para recorrer todo el
  * arreglo lee los 10 con mayor nivel de urgencia e imprime cada uno de los objetos con su método to_string().
@@ -137,29 +138,26 @@ void Agenda::muestra_pend(int dia){
  * @return
  */
 void Agenda::muestra_pend_urge(){
-    Pendientes *mas_urgentes[10];
-    for (int i = 0; i < 5; i++) {
-        mas_urgentes[i] = nullptr;
-    }
-
-    for (int i = 0; i < 10; i++){
-        for (int j = 0; j < 10; j++){
-            if (pend[i] -> nivel_urgencia() > mas_urgentes[j] -> nivel_urgencia()){
-                for (int k = 9; k > j; k--) {
-                    mas_urgentes[k] = mas_urgentes[k - 1];
-                }
-                // Insertar el nuevo mayor en la posición correspondiente
-                 mas_urgentes[j] = pend[i];
+    bool swapped;
+    // ciclo que accede a cada elemento del arreglo
+    for (int i = 0; i < cont - 1; i++) {
+        swapped = false;
+        //ciclo para comparar cada elemento del arreglo
+        for (int j=0; j < cont - i -1; j++){
+            //comparar
+            if (pend[j] -> nivel_urgencia() < pend[j + 1] -> nivel_urgencia()){
+                swap(pend[j], pend[j+1]);
+                swapped = true;
             }
-        }
+        }  
+        if (swapped == false)
+            break;  
     }
     //ciclo que recorre el arreglo e imprime sus componentes 
     for(int i=0; i < cont ; i++){
-        if (mas_urgentes[i] != nullptr){
-        cout << mas_urgentes[i] -> to_string();
+        cout << pend[i] -> to_string();
         }
     }
-}
 
 /**
  * agrega_escolares crea un objeto Escolares y lo agrega a

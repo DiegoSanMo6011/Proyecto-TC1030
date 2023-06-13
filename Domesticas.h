@@ -30,11 +30,7 @@ class Domesticas: public Pendientes{
         Domesticas();
         //constructor
         Domesticas(string,string,int,int,string);
-        //metodos
-        string get_tipo();
-        string get_estado();
-        int get_dia();
-        void set_estado(string nuevo_estado);        
+        //metodos     
         int nivel_urgencia ();
         string to_string ();
 };
@@ -51,44 +47,6 @@ Domesticas::Domesticas (string nom, string tip, int day, int impor, string estat
     estado = estatus;
 }
 
-/**
- * getter estado
- *
- * @param
- * @return string estado
-*/
-string Domesticas::get_estado(){
-    return estado;
-}
-
-/**
- * getter dia
- *
- * @param
- * @return string tipo
-*/
-int Domesticas::get_dia(){
-    return dia;
-}
-/**
- * getter tipo
- *
- * @param
- * @return string tipo
-*/
-string Domesticas::get_tipo(){
-    return tipo;
-}
-
-/**
- * setter estado
- *
- * @param string nuevo_estado 
- * @return 
-*/
-void Domesticas::set_estado(string nuevo_estado){
-    estado=nuevo_estado;
-}
 
 /**
  * Calcula el nivel de urgencia del pendiente
